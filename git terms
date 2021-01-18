@@ -1,0 +1,10 @@
+work with github
+terms:
+-repo (it contains the collection of file - project folder)
+-commit (the latest snapshot of a project/changes)
+-hash (the unique commit ID)
+-checkout (A checkout is the act of switching between different versions of a target entity)
+-branch (independent line of development)
+-merge (join two or more development histories together)
+-remote (It is a secondary copy of a Git repository where you push changes for collaboration or backup)
+-clone (Clone operation copies remote repository into local) 
