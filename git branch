@@ -1,0 +1,4 @@
+can have more than one branch.
+-Every branch has its own copy of the project history and develops on its own code.
+They are easily and often merged with each other.
+- it does not effect the main branch 
