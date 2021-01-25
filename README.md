@@ -29,16 +29,21 @@ example :
 1. create new folder in desktop (ex: ina-test-repo)
 2. open GIT BASH - go to folder ina-test-repo in desktop
                   how?
-                  1- $ pwd (print working directory- it shows current directory) 
+                  
+                  1- $ pwd (print working directory- it shows current directory)
                      /c/User/ina
+                     
                   2- $ls (-it will display all folders/files in the directory)
                   *remember we store ina-test-repo in desktop
+                  
                   3- $ cd desktop (change directory to desktop)
                   currently we are on desktop directory
                   (to check - $ pwd)
                   /c/User/ina/desktop
+                  
                   4- $ ls (is list)
                      desktop.ini ina-test-repo/
+                     
                   5- $ cd ina-test-repo
                   currently we are on ina-test-repo folder
                   
