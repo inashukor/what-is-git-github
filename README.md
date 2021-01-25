@@ -13,9 +13,10 @@ basic git and github
 
 Git command(local)
 - $git init (make a normal empty folder to a git repo)
-- $git add<file(s)> (add file into staging area where the file are ready to commit)
+- $git add<file(s)> (add file into staging area where the file are ready to commit) 
+- $git add . (add all edit/add files into staging area)
 - $git status (check status of a file)
-- $git commit
+- $git commit (save file ex: git commit -m "Menambahkan file index.html)
 - $git config
 - $git branch
 - $git help
@@ -27,8 +28,8 @@ Git command(local)
 
 example :
 1. create new folder in desktop (ex: ina-test-repo)
-2. open GIT BASH - go to folder ina-test-repo in desktop
-                  how?
+2. open GIT BASH - go to folder ina-test-repo in desktop.
+How?
                   
                   1- $ pwd (print working directory- it shows current directory)
                      /c/User/ina
@@ -47,7 +48,7 @@ example :
                   5- $ cd ina-test-repo
                   currently we are on ina-test-repo folder
                   
-                  ///make ina-test-repo to REPO GIT (master branch)///
+3. make ina-test-repo to REPO GIT (master branch)
                   
                   6- $ git init
                   Initialized empty Git repository in C:/Users/ina/Desktop/ina-test-repo/.git/
@@ -65,7 +66,8 @@ example :
 
                       nothing added to commit but untracked files present (use "git add" to track)
 
-                  **add file to staging area
+4. add index.html file to staging area
+
                   8- $ git add index.html
                   
                   9- $ git status
@@ -76,5 +78,34 @@ example :
                       Changes to be committed:
                         (use "git rm --cached <file>..." to unstage)
                               new file:   index.html
+                              
+                  10- $ git commit -m "Menambahkan file index.html"
+                      [master (root-commit) 2f5e603] Menambahkan file index.html
+                       1 file changed, 12 insertions(+)
+                       create mode 100644 index.html
+                       
+5. edit index.html file and add new file - style.css
+                
+                11- $ git status
+                
+                  On branch master
+                  Changes not staged for commit:
+                    (use "git add <file>..." to update what will be committed)
+                    (use "git restore <file>..." to discard changes in working directory)
+                          modified:   index.html
 
+                  Untracked files:
+                    (use "git add <file>..." to include in what will be committed)
+                          style.css
+
+                  no changes added to commit (use "git add" and/or "git commit -a")
                   
+6. add all edit/add file into staging area
+      
+                12- $ git add .
+                13- $ git status
+                    On branch master
+                    Changes to be committed:
+                      (use "git restore --staged <file>..." to unstage)
+                            modified:   index.html
+                            new file:   style.css
