@@ -17,8 +17,8 @@ Git command(local)
 - $git add . (add all edit/add files into staging area)
 - $git status (check status of a file)
 - $git commit -m (save file ex: git commit -m "Menambahkan file index.html)
-- $git log (view all the commit history)/ ex: git log -- style.css (only for style.css) / ex: git log -3 (only 3 latest commit)
-- $git checkout (to retrive back the deleted file)
+- $git log (view all the commit history)/ ex: git log -- index.html (only for index.html) / ex: git log -3 (only 3 latest commit)
+- $git checkout (to retrive back the deleted file, ex: $ git checkout 7272e -- style.css)
 - $git config
 - $git branch
 - $git help
