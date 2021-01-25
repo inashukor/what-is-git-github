@@ -23,6 +23,10 @@ Git command(local)
 - $git branch
 - $git help
 
+#example modified mahasiswa.html
+when we modified the file, we can add and commit simultaneously
+example: $ git commit -am "menambah data pada file mahasiswa.html"
+
 3 area in repo
 - working tree (project folder)
 - staging area (ready to commit)
