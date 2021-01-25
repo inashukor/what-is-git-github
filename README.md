@@ -16,7 +16,9 @@ Git command(local)
 - $git add<file(s)> (add file into staging area where the file are ready to commit) 
 - $git add . (add all edit/add files into staging area)
 - $git status (check status of a file)
-- $git commit (save file ex: git commit -m "Menambahkan file index.html)
+- $git commit -m (save file ex: git commit -m "Menambahkan file index.html)
+- $git log (view all the commit history)/ ex: git log -- style.css (only for style.css) / ex: git log -3 (only 3 latest commit)
+- $git checkout (to retrive back the deleted file)
 - $git config
 - $git branch
 - $git help
@@ -109,3 +111,36 @@ How?
                       (use "git restore --staged <file>..." to unstage)
                             modified:   index.html
                             new file:   style.css
+7. commit all file in stage area
+
+              14. $ git commit -m "edit file index.html and add style.css file
+                  [master 7272ed9] edit file index.html and add style.css file
+                   2 files changed, 7 insertions(+), 1 deletion(-)
+                   create mode 100644 style.css
+ 
+ 8. to retrive deleted file (ex: style.css) - add 5 first #hash digit
+ 
+              15. $ git checkout 7272e -- style.css
+              16. $ git status
+              
+              On branch master
+              Changes to be committed:
+                (use "git restore --staged <file>..." to unstage)
+                      new file:   style.css
+                      
+              17. $ git commit -m "retrive back style.css"
+                  [master 0b3732f] retrive back style.css
+                   1 file changed, 3 insertions(+)
+                   create mode 100644 style.css
+               
+              18. $ git status
+              
+                  On branch master
+                  nothing to commit, working tree clean
+                  
+
+              
+
+              
+
+              
