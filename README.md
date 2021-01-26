@@ -1,14 +1,11 @@
 # what-is-git-github
 basic git and github
 
-1. create new branch (content-git-branch)
-2. merge (content-git-branch) into main - create pull request
-
 // FORK or FORKING is copy/duplicate other repository with their commit history into our own account(github account)
-
 // DOWNLOAD or CLONE is download the zip file into our own computer
 
-*******INSTALL GIT into windows**************
+--INSTALL GIT into windows--
+
 1. go to https://git-scm.com/ - download git for windows
 
 Git command(local)
@@ -19,11 +16,11 @@ Git command(local)
 - $git commit -m (save file ex: git commit -m "Menambahkan file index.html)
 - $git log (view all the commit history)/ ex: git log -- index.html (only for index.html) / ex: git log -3 (only 3 latest commit)
 - $git checkout (to retrive back the deleted file, ex: $ git checkout 7272e -- style.css)
-- $git config
 - $git branch (add new branch, ex: add branch dosen and branch staff)
 - $git log --all --decorate --oneline --graph (view network line of branches)
 - $git checkout <branch_name> (go to other branch)
 - $git help
+- $git config
 
 #example modified mahasiswa.html
 when we modified the file, we can add and commit simultaneously
@@ -50,8 +47,10 @@ How?
                   (to check - $ pwd)
                   /c/User/ina/desktop
                   
-                  4- $ ls (is list)
-                     desktop.ini ina-test-repo/
+                  4- $ ls (view list of file or folder in desktop)
+                     ina-test-repo/
+                     ...
+                     ...
                      
                   5- $ cd ina-test-repo
                   currently we are on ina-test-repo folder
@@ -92,7 +91,7 @@ How?
                        1 file changed, 12 insertions(+)
                        create mode 100644 index.html
                        
-5. edit index.html file and add new file - style.css
+5. modified index.html file and add new file - style.css
                 
                 11- $ git status
                 
@@ -108,7 +107,7 @@ How?
 
                   no changes added to commit (use "git add" and/or "git commit -a")
                   
-6. add all edit/add file into staging area
+6. add all modified/add file into staging area
       
                 12- $ git add .
                 13- $ git status
@@ -124,7 +123,7 @@ How?
                    2 files changed, 7 insertions(+), 1 deletion(-)
                    create mode 100644 style.css
  
- 8. to retrive deleted file (ex: style.css) - add 5 first #hash digit
+ 8. Delete file style.css and retrive the deleted file - add 5 first #hash digit
  
               15. $ git checkout 7272e -- style.css
               16. $ git status
