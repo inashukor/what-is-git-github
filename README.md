@@ -20,7 +20,7 @@ Git command(local)
 - $git log (view all the commit history)/ ex: git log -- index.html (only for index.html) / ex: git log -3 (only 3 latest commit)
 - $git checkout (to retrive back the deleted file, ex: $ git checkout 7272e -- style.css)
 - $git config
-- $git branch
+- $git branch (add new branch)
 - $git help
 
 #example modified mahasiswa.html
