@@ -1,6 +1,62 @@
 can have more than one branch.
 -Every branch has its own copy of the project history and develops on its own code.
 They are easily and often merged with each other.
-- it does not effect the main branch 
+- it does not effect the main branch (master) 
 
 GIT BRANCH AND MERGE
+
+example:
+1. create git folder (ex: ina-test-repo-2) and  add file name mahasiswa.html - refer readme example on ina-test-repo folder
+2. create branch (branch : dosen and staf)
+        
+                1- $ git branch dosen
+                2- $ git branch staff
+3. check branch name and which branch is active (current active branch is master, with star indicator *)
+
+                3- $ git branch
+                    dosen
+                  * master
+                    staff
+4. go to dosen branch 
+                
+                4- $ git checkout dosen
+                5- $ git branch
+                   * dosen
+                     master
+                     staff
+                    
+5. currently we are on dosen branch (create new file name dosen.html and add into the dosen branch then commit)
+
+                6- $ git add .
+                7- $ git commit -m "menambah file dosen.html"
+6. view network graph (new commit on dosen branch)
+
+                8- $ git log --all --decorate --oneline --graph
+                    * 4d630df (HEAD -> dosen) menambahkan file dosen.html
+                    * 47de190 (staff, master) menambah 1 data mahasiswa
+                    * 260e41f menambahkan file mahasiswa.html
+                    
+ 7. add commit for staff branch (add new file name staff.html)
+                9- $ git checkout staff (go to staff branch)
+               10- $ git status (check status file)
+                   On branch staff
+                    Untracked files:
+                      (use "git add <file>..." to include in what will be committed)
+                            staff.html
+
+                    nothing added to commit but untracked files present (use "git add" to track)
+                    
+                 11- $ git add. (add all file)
+                 12- $ git commit -m "menambahkan file staff.html"
+                       [staff 6d32aca] Menambahkan file staff.html
+                       1 file changed, 18 insertions(+)
+                       create mode 100644 staff.html
+8. view current graph (currently we are on staff branch so HEAD point to staff)
+                
+                13- $ git log --all --decorate --oneline --graph
+
+                    * 6d32aca (HEAD -> staff) Menambahkan file staff.html
+                    | * 4d630df (dosen) menambahkan file dosen.html
+                    |/
+                    * 47de190 (master) menambah 1 data mahasiswa
+                    * 260e41f menambahkan file mahasiswa.html
