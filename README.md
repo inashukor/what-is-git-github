@@ -22,6 +22,7 @@ Git command(local)
 - $git config
 - $git branch (add new branch, ex: add branch dosen and branch staff)
 - $git log --all --decorate --oneline --graph (view network line of branches)
+- $git checkout <branch_name> (go to other branch)
 - $git help
 
 #example modified mahasiswa.html
