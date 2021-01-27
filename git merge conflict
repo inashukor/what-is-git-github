@@ -1,0 +1,13 @@
+GIT MERGE CONFLICT
+
+--continue from topic "git branch and merge"
+
+1. create new branch name dev
+                 1- $ git branch dev
+                 2- $ git branch (currently we are on master branch)
+                      dev
+                    * master
+                    
+                 3- $ git checkout dev (switch to branch dev)
+                    Switched to branch 'dev'
+2. make a change for 
