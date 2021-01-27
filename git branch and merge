@@ -7,7 +7,7 @@ GIT BRANCH AND MERGE
 
 example:
 1. create git folder (ex: ina-test-repo-2) and  add file name mahasiswa.html - refer readme example on ina-test-repo folder
-2. create branch (branch : dosen and staf)
+2. CREATE BRANCH (branch : dosen and staf)
         
                 1- $ git branch dosen
                 2- $ git branch staff
@@ -61,11 +61,13 @@ example:
                     * 47de190 (master) menambah 1 data mahasiswa
                     * 260e41f menambahkan file mahasiswa.html
                     
+------this graph shows that staff and dosen branch have direct path with the master-------
+                     
 MERGE : there is 2 type of merge
         - FAST FORWARD : the branch has direct path from master 
         - THREE-WAY MERGE : do not have direct path from master
 
-9. merge dosen branch to master
+9. FAST FORWARD MERGE : merge dosen branch to master
 
                  14- $ git checkout master (back to master branch)
                      Switched to branch 'master'
@@ -97,7 +99,7 @@ MERGE : there is 2 type of merge
                         * 47de190 menambah 1 data mahasiswa
                         * 260e41f menambahkan file mahasiswa.html
                         
-                     ------this graph shows that staff branch do not have direct path with the master-------
+ ------this graph shows that staff branch do not have direct path with the master-------
                      
                      20- $ git merge staff
                          Merge made by the 'recursive' strategy.
@@ -115,7 +117,7 @@ MERGE : there is 2 type of merge
                         * 47de190 menambah 1 data mahasiswa
                         * 260e41f menambahkan file mahasiswa.html
                         
-                        ---------the graph shows the staff branch merged into master------
+ ---------the graph shows the staff branch merged into master------
                         
                       22- $ git branch -d staff (delete staff branch if not needed)
                           Deleted branch staff (was 6d32aca).
