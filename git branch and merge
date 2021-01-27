@@ -60,3 +60,62 @@ example:
                     |/
                     * 47de190 (master) menambah 1 data mahasiswa
                     * 260e41f menambahkan file mahasiswa.html
+                    
+MERGE : there is 2 type of merge
+        - FAST FORWARD : the branch has direct path from master 
+        - THREE-WAY MERGE : do not have direct path from master
+
+9. merge dosen branch to master
+
+                 14- $ git checkout master (back to master branch)
+                     Switched to branch 'master'
+                 15- $ git merge dosen
+                      Updating 47de190..4d630df
+                      Fast-forward
+                      dosen.html | 25 +++++++++++++++++++++++++
+                      1 file changed, 25 insertions(+)
+                      create mode 100644 dosen.html
+10. delete dosen branch (because we have merge it into master)
+                  
+                  16- $ git branch --merged (shows which branch that have been merged)
+                       dosen
+                     * master
+                     
+                  17- $ git branch -d dosen (delete branch dosen)
+                        Deleted branch dosen (was 4d630df).
+                  
+                  18- $ git branch (make sure dosen branch deleted, only staff branch appear)
+                       * master
+                         staff
+11. THREE-WAY MERGE / MERGE COMMIT : do not have direct path with the master
+                     
+                    19- $ git log --all --decorate --oneline --graph
+                    
+                        * 6d32aca (staff) Menambahkan file staff.html
+                        | * 4d630df (HEAD -> master) menambahkan file dosen.html
+                        |/
+                        * 47de190 menambah 1 data mahasiswa
+                        * 260e41f menambahkan file mahasiswa.html
+                        
+                     ------this graph shows that staff branch do not have direct path with the master-------
+                     
+                     20- $ git merge staff
+                         Merge made by the 'recursive' strategy.
+                         staff.html | 18 ++++++++++++++++++
+                         1 file changed, 18 insertions(+)
+                         create mode 100644 staff.html
+                         
+                     21- $ git log --all --decorate --oneline --graph
+                     
+                        *   133c14b (HEAD -> master) Merge branch 'staff'
+                        |\
+                        | * 6d32aca (staff) Menambahkan file staff.html
+                        * | 4d630df menambahkan file dosen.html
+                        |/
+                        * 47de190 menambah 1 data mahasiswa
+                        * 260e41f menambahkan file mahasiswa.html
+                        
+                        ---------the graph shows the staff branch merged into master------
+                        
+                      22- $ git branch -d staff (delete staff branch if not needed)
+                          Deleted branch staff (was 6d32aca).
