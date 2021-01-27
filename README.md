@@ -14,11 +14,13 @@ Git command(local)
 - $git add . (add all edit/add files into staging area)
 - $git status (check status of a file)
 - $git commit -m (save file ex: git commit -m "Menambahkan file index.html)
-- $git log (view all the commit history)/ ex: git log -- index.html (only for index.html) / ex: git log -3 (only 3 latest commit)
-- $git checkout (to retrive back the deleted file, ex: $ git checkout 7272e -- style.css)
-- $git branch (add new branch, ex: add branch dosen and branch staff)
+- $git log (view all the commit history)/ ex: git log --index.html (only for index.html) / ex: git log -3 (only 3 latest commit)
 - $git log --all --decorate --oneline --graph (view network line of branches)
+- $git checkout (to retrive back the deleted file, ex: $ git checkout 7272e --style.css)
 - $git checkout <branch_name> (go to other branch)
+- $git branch (add new branch, ex: add branch dosen and branch staff)
+- $git branch -d staff (delete staff branch)
+- $git merge dosen (merge dosen branch into master)
 - $git help
 - $git config
 
