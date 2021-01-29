@@ -10,4 +10,89 @@ GIT MERGE CONFLICT
                     
                  3- $ git checkout dev (switch to branch dev)
                     Switched to branch 'dev'
-2. make a change for 
+                    
+2. on dev branch , make a change in mahasiswa.html and save.
+                 4- $ git status (show that mahasiswa.html have been modified and not commit yet)
+                    On branch dev
+                    Changes not staged for commit:
+                      (use "git add <file>..." to update what will be committed)
+                      (use "git restore <file>..." to discard changes in working directory)
+                            modified:   mahasiswa.html
+
+                    no changes added to commit (use "git add" and/or "git commit -a")
+3. Add mahasiswa.html file to staging area and commit
+
+                   5- $ git add .
+                   6- $ git commit -m "mengubah file mahasiswa.html"
+                        [dev 7e1075b] mengubah file mahasiswa.html
+                        1 file changed, 4 insertions(+), 3 deletions(-)
+                        
+4. show the current graph (continue from tutorial git branch & merge)
+                    7- $ git log --all --decorate --oneline --graph
+                        * 7e1075b (HEAD -> dev) mengubah file mahasiswa.html
+                        *   133c14b (master) Merge branch 'staff'
+                        |\
+                        | * 6d32aca Menambahkan file staff.html
+                        * | 4d630df menambahkan file dosen.html
+                        |/
+                        * 47de190 menambah 1 data mahasiswa
+                        * 260e41f menambahkan file mahasiswa.html
+                        
+ 5. change to master branch and also modified mahasiswa.html that not same with changes made in mahasiswa.html in dev branch. Add and commit
+                     8- $ git checkout master
+                        Switched to branch 'master'
+                     9- $ git commit -am "mengubah isi dari file mahasiswa.html"      
+                        [master 33660bc] mengubah isi dari file mahasiswa.html
+                         1 file changed, 2 insertions(+), 4 deletions(-)
+                         
+                     10 - $ git log --all --decorate --oneline --graph
+                          * 33660bc (HEAD -> master) mengubah isi dari file mahasiswa.html
+                          | * 7e1075b (dev) mengubah file mahasiswa.html
+                          |/
+                          *   133c14b Merge branch 'staff'
+                          |\
+                          | * 6d32aca Menambahkan file staff.html
+                          * | 4d630df menambahkan file dosen.html
+                          |/
+                          * 47de190 menambah 1 data mahasiswa
+                          * 260e41f menambahkan file mahasiswa.html
+-------------- this is the current graph where have different commit from branch master and dev
+6. CONFLICT MERGE (merge dev branch to master)
+
+                     11- $ git merge dev
+                        Auto-merging mahasiswa.html
+                        CONFLICT (content): Merge conflict in mahasiswa.html
+                        Automatic merge failed; fix conflicts and then commit the result.
+                        
+ 7. it will show the different on branch dev and master. choose to delete or keep the code and save.
+                     12- $ git status (to check status)
+                          On branch master
+                          You have unmerged paths.
+                            (fix conflicts and run "git commit")
+                            (use "git merge --abort" to abort the merge)
+
+                          Unmerged paths:
+                            (use "git add <file>..." to mark resolution)
+                                  both modified:   mahasiswa.html
+
+                          no changes added to commit (use "git add" and/or "git commit -a")
+                     13- $ git add . (add the modified file into staging area)
+                     14- $ git commit
+                          hint: Waiting for your editor to close the file...
+                          [master 3f7eacd] Merge branch 'dev'
+                          
+                     15- $ git log --all --decorate --oneline --graph
+                            *   3f7eacd (HEAD -> master) Merge branch 'dev'
+                            |\
+                            | * 7e1075b (dev) mengubah file mahasiswa.html
+                            * | 33660bc mengubah isi dari file mahasiswa.html
+                            |/
+                            *   133c14b Merge branch 'staff'
+                            |\
+                            | * 6d32aca Menambahkan file staff.html
+                            * | 4d630df menambahkan file dosen.html
+                            |/
+                            * 47de190 menambah 1 data mahasiswa
+                            * 260e41f menambahkan file mahasiswa.html
+------------------------dev branch successfully merge---------------
+                    
