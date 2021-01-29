@@ -95,4 +95,86 @@ GIT MERGE CONFLICT
                             * 47de190 menambah 1 data mahasiswa
                             * 260e41f menambahkan file mahasiswa.html
 ------------------------dev branch successfully merge---------------
-                    
+                    16- $ git branch -d dev (delete dev branch)
+                          Deleted branch dev (was 7e1075b).
+
+************* how to checkout/back to any commit? 
+example: checkout the commit "menambahkan file dosen.html"
+                     1- $ git log (will display all the commit)
+                          commit 3f7eacdd96ffe950622fb1fe2361ddcc417e00c3 (HEAD -> master)
+                          Merge: 33660bc 7e1075b
+                          Author: inashukor <ishukor51@gmail.com>
+                          Date:   Fri Jan 29 15:07:27 2021 +0800
+
+                              Merge branch 'dev'
+
+                          commit 33660bc71ff457b7bd31d94b2a8c91767964fe3a
+                          Author: inashukor <ishukor51@gmail.com>
+                          Date:   Fri Jan 29 14:36:38 2021 +0800
+
+                              mengubah isi dari file mahasiswa.html
+
+                          commit 7e1075b72da1adda9c0e461ff736c8a2b7dfd5ef
+                          Author: inashukor <ishukor51@gmail.com>
+                          Date:   Fri Jan 29 14:26:13 2021 +0800
+
+                              mengubah file mahasiswa.html
+
+                          commit 133c14b85166a76950287679b98cb86527653af4
+                          Merge: 4d630df 6d32aca
+                          Author: inashukor <ishukor51@gmail.com>
+                          Date:   Wed Jan 27 14:25:16 2021 +0800
+
+                              Merge branch 'staff'
+
+                          commit 6d32acaad24d2482d67bea9e52feb680d9529577
+                          Author: inashukor <ishukor51@gmail.com>
+                          Date:   Tue Jan 26 17:11:23 2021 +0800
+
+                              Menambahkan file staff.html
+
+                          commit 4d630df1d25dc66caf74c7b0b73b28e04f929d0e
+                          Author: inashukor <ishukor51@gmail.com>
+                          Date:   Tue Jan 26 16:00:48 2021 +0800
+
+                              menambahkan file dosen.html
+                       
+                       
+                      2- $ git checkout 4d630df (copy 7 digit from commit hash)
+                          Note: switching to '4d630df'.
+
+                          You are in 'detached HEAD' state. You can look around, make experimental
+                          changes and commit them, and you can discard any commits you make in this
+                          state without impacting any branches by switching back to a branch.
+
+                          If you want to create a new branch to retain commits you create, you may
+                          do so (now or later) by using -c with the switch command. Example:
+
+                            git switch -c <new-branch-name>
+
+                          Or undo this operation with:
+
+                            git switch -
+
+                          Turn off this advice by setting config variable advice.detachedHead to false
+
+                          HEAD is now at 4d630df menambahkan file dosen.html
+
+                      3- $ git log --all --decorate --oneline --graph (display 'detached HEAD' state.)
+                      
+                            *   3f7eacd (master) Merge branch 'dev'
+                            |\
+                            | * 7e1075b mengubah file mahasiswa.html
+                            * | 33660bc mengubah isi dari file mahasiswa.html
+                            |/
+                            *   133c14b Merge branch 'staff'
+                            |\
+                            | * 6d32aca Menambahkan file staff.html
+                            * | 4d630df (HEAD) menambahkan file dosen.html
+                            |/
+                            * 47de190 menambah 1 data mahasiswa
+                            * 260e41f menambahkan file mahasiswa.html
+  
+  currently the HEAD at commit 4d630df and we can add branch from that point or checkout back to the master
+                            
+                            
