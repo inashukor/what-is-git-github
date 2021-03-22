@@ -16,7 +16,7 @@ Git command(local)
 - $git commit -m (save file ex: git commit -m "Menambahkan file index.html)
 - $git log (view all the commit history)/ ex: git log --index.html (only for index.html) / ex: git log -3 (only 3 latest commit)
 - $git log --all --decorate --oneline --graph (view network line of branches)
-- $git checkout (to retrive back the deleted file, ex: $ git checkout 7272e --style.css)
+- $git checkout (to retrive back the deleted file, ex: $ git checkout 7292e --style.css)
 - $git checkout <branch_name> (go to other branch)
 - $git branch (add new branch, ex: add branch dosen and branch staff)
 - $git branch -d staff (delete staff branch)
@@ -89,9 +89,9 @@ How?
                               new file:   index.html
                               
                   10- $ git commit -m "Menambahkan file index.html"
-                      [master (root-commit) 2f5e603] Menambahkan file index.html
+                      [master (root-commit) 2f5e333] Menambahkan file index.html
                        1 file changed, 12 insertions(+)
-                       create mode 100644 index.html
+                       create mode 122644 index.html
                        
 5. modified index.html file and add new file - style.css
                 
@@ -123,11 +123,11 @@ How?
               14. $ git commit -m "edit file index.html and add style.css file
                   [master 7272ed9] edit file index.html and add style.css file
                    2 files changed, 7 insertions(+), 1 deletion(-)
-                   create mode 100644 style.css
+                   create mode 122644 style.css
  
  8. Delete file style.css and retrive the deleted file - add 5 first #hash digit
  
-              15. $ git checkout 7272e -- style.css
+              15. $ git checkout 7292e -- style.css
               16. $ git status
               
               On branch master
@@ -138,7 +138,7 @@ How?
               17. $ git commit -m "retrive back style.css"
                   [master 0b3732f] retrive back style.css
                    1 file changed, 3 insertions(+)
-                   create mode 100644 style.css
+                   create mode 122644 style.css
                
               18. $ git status
               
