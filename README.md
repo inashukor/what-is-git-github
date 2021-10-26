@@ -23,6 +23,8 @@ Git command(local)
 - $git merge dosen (merge dosen branch into master)
 - $git help
 - $git config
+- $git commit --amend (untuk ubah message latest commmit)
+- $gitignore (untuk ignore file, git tidak akan push masuk master/server)
 
 #example modified mahasiswa.html
 when we modified the file, we can add and commit simultaneously
